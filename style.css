@@ -230,3 +230,34 @@ details[open] .content {
 #modal-close:hover {
     opacity: 0.9;
 }
+
+/* Quitar la flecha gris nativa de HTML */
+summary::-webkit-details-marker,
+summary::marker {
+  display: none;
+}
+
+/* Alineación con Flexbox */
+summary {
+  display: flex;
+  justify-content: space-between; /* Empuja el icono a la derecha */
+  align-items: center;            /* Centra verticalmente el texto y el icono */
+  cursor: pointer;                /* Cambia el cursor a mano al pasar por encima */
+  user-select: none;
+}
+
+/* Ajustes finos para el título y el icono */
+summary h2 {
+  margin: 0;                      /* Elimina márgenes extra para centrar bien */
+}
+
+summary .arrow-icon {
+  font-size: 28px;
+  transition: transform 0.3s ease; /* Animación suave de rotación */
+  color: #a0aec0;                  /* Color sutil para la flecha (ajústalo a tu gusto) */
+}
+
+/* Rotar la flecha 180° cuando el desplegable esté abierto */
+details[open] summary .arrow-icon {
+  transform: rotate(180deg);
+}
