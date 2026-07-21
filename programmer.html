@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="header-container"></div>
+
+    <main>
+        <section class="card">
+            <h1>Game Programmer</h1>
+            <p>Unity Developer passionate about crafting immersive experiences that blend mechanical innovation with compelling storytelling.</p>
+            <p>Specialized in system architecture, procedural generation, and workflow optimization in Unity/C#. Focused on writing clean, scalable, and efficient code to bridge development stages, ensuring flawless technical execution and a polished game feel.</p>
+        </section>
+
+        <section class="accordion">
+            <details class="card">
+                <summary><h2>Procedural Generation - Books of Horror</h2></summary>
+                <div class="content">
+                    <h3>Reinventing Procedural Horror</h3>
+                    <p><strong>Books of Horror</strong> is a procedural psychological horror game currently in development with <i>Save Game Studio</i>, slated for release in 2026. Rooted in Lovecraft's quote, <i>"the oldest and strongest emotion of mankind is fear, and the oldest and strongest kind of fear is fear of the unknown"</i>, the game forces players to improvise in unpredictable environments.</p>
+
+                    <div class="media-container">
+                        <video controls class="procedural-video">
+                            <source src="/Assets/Videos/Procedural_Algorithm.mov" type="video/mp4">
+                            Tu navegador no soporta el video.
+                        </video>
+                    </div>
+
+                    <h3>The Challenge: Beyond Pre-built Rooms</h3>
+                    <p>Most procedural systems simply snap together <strong>pre-made rooms</strong>. For Books of Horror, I aimed for a more organic and challenging experience where the architecture itself acts as an antagonist.</p>
+
+                    <div class="solution-grid">
+                        <div class="solution-text">
+                            <h3>The Solution: Algorithmic Architecture</h3>
+                            <p>I developed a system that constructs dungeons from the ground up, <strong>cell by cell</strong>. The algorithm manages room shapes and categorizes instantiation points based on their functionality <i>(walls vs. room centers)</i>, validating essential escape routes before finalizing the layout.</p>
+                        </div>
+                        <div>
+                            <img src="/Assets/Images/Procedural_Algorithm.png" alt="Procedural Algorithm" class="framed-image">
+                            <small><em>Benchmark: 100+ rooms / 16ms logic time</em></small>
+                        </div>
+                    </div>
+
+                    <h3>Technical Optimization</h3>
+                    <p>Performance was non-negotiable. The system generates <strong>15 rooms in just 30 ms</strong>. Logically, dungeons <strong>exceeding 100 rooms</strong> are processed in under <strong>16 ms</strong>. <br></p>
+                    
+                    <a href="https://store.steampowered.com/app/4391720/Books_of_Horror/" class="btn-cta">Steam page</a>
+                </div>
+            </details>
+
+            <details class="card">
+                <summary><h2>Level Design Systems - The Last Witch</h2></summary>
+                <div class="content">
+                    <h3>Structure and Pacing in 3D Environments</h3>
+                    <p><strong>The Last Witch</strong> is a 3D action-platformer focused on dynamic combat and contained exploration. The main design challenge was structuring open environments to control player tension and prevent disorientation without relying on intrusive UI elements.</p>
+
+                    <!-- Macro-Design -->
+                    <h3>Macro-Design: Global Map Overview</h3>
+                    <p>The general map is structured into interconnected sectors via natural bottlenecks. This regulates gameplay pacing, alternating free exploration freedom with controlled points of no return enforced by terrain geometry.</p>
+                    <img src="/Assets/Images/TLW_Map.png" alt="The Last Witch General Map" class="framed-image">
+
+                    <h3>Micro-Design: Learning Curve and Onboarding</h3>
+                    <p>To avoid overwhelming the player, mechanics are introduced in an isolated and controlled manner across two distinct initial zones:</p>
+
+                    <!-- Zone 1 -->
+                    <div class="solution-grid">
+                        <div class="solution-text">
+                            <h3>Zone 1: Freedom, Combat, and Environmental Stealth</h3>
+                            <p>The player spawns in the center with <strong>total freedom of movement</strong>. Points of interest branch toward enemies and a high-elevation block hiding the progression key.</p>
+                            <p>Design rewards observation: one enemy patrols and stops facing backwards, organically inviting the player to execute a surprise attack. A second enemy patrols with a stealth zone at the end of their path. Paths leading to optional items are discovered naturally while exploring near the enemies.</p>
+                        </div>
+                        <img src="/Assets/Images/TLW_Zone1.png" alt="Zone 1 - Combat and Stealth" class="framed-image">
+                    </div>
+
+                    <!-- Zone 2 -->
+                    <div class="solution-grid">
+                        <div class="solution-text">
+                            <h3>Zone 2: Platforming Introduction and Hazards</h3>
+                            <p>Once initial tension clears, the second part transitions into an isolated environment focused purely on <strong>precision platforming</strong> to gauge distances.</p>
+                            <p>Spikes are introduced as a clear lethal environmental hazard, alongside a classic design duality: a visible optional item that tempts the player into a higher-difficulty alternative path.</p>
+                        </div>
+                        <img src="/Assets/Images/TLW_Zone2.png" alt="Zone 2 - Platforming" class="framed-image">
+                    </div>
+
+                    <h3>Design Intentionality</h3>
+                    <p>Through precise study of heights, volumes, and AI behaviors during the <i>blockout</i> phase, players learn the game's rules intuitively without relying on intrusive text tutorials.</p>
+                    
+                    <a href="https://drive.google.com/file/d/1QBkJGE_xdhAVWkpR-X-3cg6r8Xx57pit/" target="_blank" class="btn-cta">Download Game</a>
+                </div>
+            </details>
+
+            <details class="card">
+                <summary><h2>QA Feedback & Gamefeel - SynthEscape</h2></summary>
+                <div class="content">
+                    <h3>Key Analysis Areas</h3>
+                    <ul>
+                        <li><strong>Optimization and Hardware:</strong> Comprehensive performance testing on handheld devices, validating frame rates (stable 50 FPS at low-power 10W profiles and over 90 FPS at 15W on a Rog Ally).</li>
+                        <li><strong>UI and Logic Bug Tracking:</strong> Identifying minor visual clipping issues in rendering sorting layers, audio micro-stutters in soundtrack loops, and occasional input locks on the Game Over screen.</li>
+                        <li><strong>Design and Gamefeel:</strong> Positive validation of core mechanics (such as the grazing system and movement precision), mid-level boss pacing curve adjustments, and visual projectile legibility.</li>
+                    </ul>
+                    <h3>Project Impact</h3>
+                    <p>This technical report enabled the team to pinpoint critical UI and performance optimization targets prior to launch, reinforcing overall aesthetic cohesion and title fluidity.</p>
+                    <a href="https://drive.google.com/file/d/1FYbbV8BBnSsCMaiHVTZxPg8P-y3W59Hc/" target="_blank" class="btn-cta">Read Full Report (PDF)</a>
+                </div>
+            </details>
+        </section>
+    </main>
+
+    <div id="footer-container"></div>
+    <div id="image-modal">
+        <img id="modal-img" src="" alt="Expanded view">
+        <button id="modal-close">Close</button>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
