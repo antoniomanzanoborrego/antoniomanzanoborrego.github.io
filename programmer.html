@@ -38,12 +38,12 @@
                         </div>
                         <div>
                             <img src="/Assets/Images/Procedural_Algorithm.png" alt="Procedural Algorithm" class="framed-image">
-                            <small><em>Benchmark: 100+ rooms / 16ms logic time</em></small>
+                            <small><em>Benchmark: 100+ rooms / 16-30ms logic time</em></small>
                         </div>
                     </div>
 
                     <h3>Technical Optimization</h3>
-                    <p>Performance was non-negotiable. The system generates <strong>15 rooms in just 30 ms</strong>. Logically, dungeons <strong>exceeding 100 rooms</strong> are processed in under <strong>16 ms</strong>. <br></p>
+                    <p>Performance was non-negotiable. The system generates <strong>15 rooms in just 30 ms</strong>. Logically, dungeons <strong>exceeding 100 rooms</strong> are processed in under <strong>30 ms</strong>. <br></p>
                     
                     <a href="https://store.steampowered.com/app/4391720/Books_of_Horror/" class="btn-cta">Steam page</a>
                 </div>
@@ -91,17 +91,55 @@
             </details>
 
             <details class="card">
-                <summary><h2>QA Feedback & Gamefeel - SynthEscape</h2><span class="material-symbols-outlined arrow-icon">keyboard_arrow_down</span></summary>
+                <summary>
+                    <h2>QA Feedback & Gamefeel - SynthEscape</h2>
+                    <span class="material-symbols-outlined arrow-icon">keyboard_arrow_down</span>
+                </summary>
                 <div class="content">
-                    <h3>Key Analysis Areas</h3>
+                    <h3>Collaborating with RabidTomato Games</h3>
+                    <p>I collaborated as an external QA Tester with an independent studio during the development of <strong>SynthEscape</strong>—a '80s Synthwave-themed precision shmup where grazing enemy fire charges your time-slowing field and builds your score.</p>
+
+                    <h3>Deep Playtest & Technical Analysis</h3>
+                    <p>My task was to conduct an exhaustive evaluation of the playable demo to scrutinize every layer of the experience. I focused on performance, UI/UX responsiveness, audio seamlessness, and the gamefeel of core gameplay mechanics.</p>
+
+                    <p>I crafted a meticulous technical report detailing edge-case bugs and proposing actionable solutions to streamline development:</p>
                     <ul>
-                        <li><strong>Optimization and Hardware:</strong> Comprehensive performance testing on handheld devices, validating frame rates (stable 50 FPS at low-power 10W profiles and over 90 FPS at 15W on a Rog Ally).</li>
-                        <li><strong>UI and Logic Bug Tracking:</strong> Identifying minor visual clipping issues in rendering sorting layers, audio micro-stutters in soundtrack loops, and occasional input locks on the Game Over screen.</li>
-                        <li><strong>Design and Gamefeel:</strong> Positive validation of core mechanics (such as the grazing system and movement precision), mid-level boss pacing curve adjustments, and visual projectile legibility.</li>
+                        <li><strong>Optimization & Hardware:</strong> Benchmarked performance on handheld devices (ROG Ally), validating solid frame rates (stable 50 FPS at 10W profiles and over 90 FPS at 15W).</li>
+                        <li><strong>UI & Logic Bug Tracking:</strong> Identified rendering sorting layer glitches, audio micro-stutters in soundtrack loops, and input freezes on the Game Over screen.</li>
+                        <li><strong>Design & Gamefeel:</strong> Evaluated visual projectile legibility, enemy targeting lines, mid-level boss pacing curves, and bullet-grazing responsiveness.</li>
                     </ul>
+
                     <h3>Project Impact</h3>
-                    <p>This technical report enabled the team to pinpoint critical UI and performance optimization targets prior to launch, reinforcing overall aesthetic cohesion and title fluidity.</p>
+                    <p>This report provided the development team with clear, contextualized feedback, enabling them to evaluate issues individually and prioritize fixes to streamline overall bug management prior to launch.</p>
+
                     <a href="https://drive.google.com/file/d/1FYbbV8BBnSsCMaiHVTZxPg8P-y3W59Hc/" target="_blank" class="btn-cta">Read Full Report (PDF)</a>
+                </div>
+            </details>
+
+            <details class="card">
+                <summary>
+                    <h2>Custom Narrative Tools & Pipeline - Tollebant Cor</h2>
+                    <span class="material-symbols-outlined arrow-icon">keyboard_arrow_down</span>
+                </summary>
+                <div class="content">
+                    <h3>Empowering Narrative Design</h3>
+                    <p>During my time leading the technical implementation of <strong>Tollebant Cor</strong>, I was tasked with translating complex game mechanics into functional code. Recognizing that narrative writing and game balance were evolving faster than the codebase, I developed a custom external tool pipeline to decouple game logic from content creation.</p>
+
+                    <h3>Unblocking Content Creators</h3>
+                    <p>To avoid bottlenecks and eliminate the team's dependency on programmers for narrative tweaks, the goal was to allow designers and writers to author branching dialogues, manage game states, and trigger gameplay events without touching a single line of code.</p>
+
+                    <img src="/Assets/Images/TollebantCor_DialogueTool.png" alt="Custom Dialogue Tool Sheet" class="framed-image">
+                    <small><em>Custom data structure mapping dialogue nodes, choices, and event calls.</em></small>
+                        <p>I designed a light, intuitive spreadsheet-to-JSON workflow. Content creators manage dialogues, branching paths, and narrative decisions through custom tables, which are parsed dynamically by Unity at runtime.</p>
+                        <p>The system supports advanced functions directly from content sheets:</p>
+                        <ul>
+                            <li><strong>Dynamic Function Triggering:</strong> Changing scenes, character states, and unlocking SMS conversations or special CG art.</li>
+                            <li><strong>Relationship & Variable Tracking:</strong> Modifying affinity metrics (e.g., <code>Sumar/Restar</code> character stats) based on player choices.</li>
+                            <li><strong>Localization & Multi-branching:</strong> Managing complex dialogue trees and variable-dependent choices effortlessly.</li>
+                        </ul>
+
+                    <h3>Project Impact</h3>
+                    <p>This tool pipeline empowered narrative designers and translators to iterate and test gameplay fully autonomously, completely isolating content creation from code delivery and ensuring development progressed smoothly even during programming freezes.</p>
                 </div>
             </details>
         </section>
